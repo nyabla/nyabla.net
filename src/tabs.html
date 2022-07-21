@@ -11,6 +11,7 @@ title: tabs
 
 <script>
     const $ = (s, e = document.body) => e.querySelector(s)
+    const t = (dt) => `${dt.toLocaleDateString()} ${dt.toLocaleTimeString()}`
 
     function update() {
         fetch('https://tabs.nyabla.net/api/total-tabs?PASSPHRASE=wafer-dollop-scrambler')
@@ -21,7 +22,7 @@ title: tabs
         .then(res => res.json())
         .then(json => {
             if (json.lastUpdate) {
-                $('#updated').innerText = new Date(json.lastUpdate)
+                $('#updated').innerText = t(new Date(json.lastUpdate))
                 $('#updated').setAttribute('datetime', json.lastUpdate)
             }
         })
