@@ -1,0 +1,32 @@
+---
+layout: base.njk
+title: tabs
+---
+<dl>
+    <dt>how many tabs does nela have open</dt>
+    <dd id="tabs">[?]</dl>
+    <dt>last updated</dt>
+    <dd><time id="updated">[?]</time></dl>
+</dl>
+
+<script>
+    const $ = (s, e = document.body) => e.querySelector(s)
+
+    function update() {
+        fetch('https://tabs.nyabla.net/api/total-tabs?PASSPHRASE=wafer-dollop-scrambler')
+        .then(res => res.json())
+        .then(json => json.totalTabs && ($('#tabs').innerText = `${json.totalTabs}`))
+
+        fetch('https://tabs.nyabla.net/api/last-update?PASSPHRASE=wafer-dollop-scrambler')
+        .then(res => res.json())
+        .then(json => {
+            if (json.lastUpdate) {
+                $('#updated').innerText = new Date(json.lastUpdate)
+                $('#updated').setAttribute('datetime', json.lastUpdate)
+            }
+        })
+    }
+
+    update()
+    setInterval(update, 5000)
+</script>
