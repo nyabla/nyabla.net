@@ -15,10 +15,6 @@ p, ul, ol {
     margin-top: 0.2rem;
 }
 
-p ~ p, ul ~ p, ol ~ p, p ~ ul, ul ~ ul, ol ~ ul, p ~ ol, ul ~ ol, ol ~ ol {
-    margin-top: initial;
-}
-
 body {
     background-color: var(--stone);
     color: var(--pimk);
