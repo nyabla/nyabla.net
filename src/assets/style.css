@@ -1,0 +1,98 @@
+@import url('fonts/alegreya.css');
+
+:root {
+    --stone: rgb(232, 226, 220);
+    --pimk: rgb(199, 0, 102);
+    --pale-pimk: rgb(232, 156, 187);
+    --bloo: rgb(37, 131, 232);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0;
+}
+
+p, ul, ol {
+    margin-top: 0.2rem;
+}
+
+p ~ p, ul ~ p, ol ~ p, p ~ ul, ul ~ ul, ol ~ ul, p ~ ol, ul ~ ol, ol ~ ol {
+    margin-top: initial;
+}
+
+body {
+    background-color: var(--stone);
+    color: var(--pimk);
+    font-family: 'Alegreya', serif;
+    font-size: 16pt;
+    margin: 88px 16px 32px 16px;
+}
+
+body > div {
+    max-width: 500px;
+    margin: auto;
+}
+
+a {
+    color: var(--pimk)
+}
+
+::selection {
+    background-color: var(--pimk);
+    color: var(--stone);
+}
+
+hr {
+    border: none;
+    border-top: 3px solid var(--pale-pimk);
+    margin: 16px 0;
+}
+
+footer, nav {
+    font-size: 12pt;
+}
+
+.flag {
+    image-rendering: pixelated;
+    vertical-align: -0.5rem;
+    padding: 0px 4px;
+}
+
+:focus-visible {
+    outline-offset: 2px;
+    outline: 4px solid var(--bloo);
+}
+
+ul {
+    list-style-type: '> ';
+}
+
+:target {
+    background-color: rgb(199, 0, 102, 0.1)
+}
+
+@media print {
+    body {
+        background-color: white;
+        color: black;
+    }
+
+    a {
+        color: black;
+    }
+
+    hr {
+        border-color: darkgray;
+    }
+
+    #footnotes li a:first-of-type {
+        display: none;
+    }
+
+    .fn {
+        text-decoration: none;
+    }
+
+    :target {
+        background-color: lightgrey;
+    }
+}
