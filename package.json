@@ -1,6 +1,7 @@
 {
   "name": "nyabladotnet",
   "version": "1.0.0",
+  "private": true,
   "author": "nela@nyabla.net",
   "license": "MPL-2.0",
   "devDependencies": {
