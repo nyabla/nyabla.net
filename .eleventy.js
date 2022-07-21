@@ -3,6 +3,7 @@ module.exports = function(eleventyConfig) {
   
     // Copy `assets/` to `_site/`
     eleventyConfig.addPassthroughCopy("src/assets");
+    eleventyConfig.addPassthroughCopy("src/favicon.ico");
 
     // FOOTNOTES
 
