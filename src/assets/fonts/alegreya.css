@@ -1,27 +1,39 @@
 @font-face {
     font-family: 'Alegreya';
-    src: url('Alegreya-Regular.woff2') format('woff2'),
+    src: local('Alegreya Regular'),
+        local('Alegreya-Regular'),
+        url('Alegreya-Regular.woff2') format('woff2'),
         url('Alegreya-Regular.woff') format('woff');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Alegreya';
-    src: url('Alegreya-Italic.woff2') format('woff2'),
+    src: local('Alegreya Italic'),
+        local('Alegreya-Italic'),
+        url('Alegreya-Italic.woff2') format('woff2'),
         url('Alegreya-Italic.woff') format('woff');
     font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Alegreya';
-    src: url('Alegreya-Bold.woff2') format('woff2'),
+    src: local('Alegreya Bold'),
+        local('Alegreya-Bold'),
+        url('Alegreya-Bold.woff2') format('woff2'),
         url('Alegreya-Bold.woff') format('woff');
     font-weight: bold;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Alegreya';
-    src: url('Alegreya-BoldItalic.woff2') format('woff2'),
+    src: local('Alegreya Bold Italic'),
+        local('Alegreya-BoldItalic'),
+        url('Alegreya-BoldItalic.woff2') format('woff2'),
         url('Alegreya-BoldItalic.woff') format('woff');
     font-weight: bold;
     font-style: italic;
+    font-display: swap;
 }
