@@ -3,7 +3,6 @@
 :root {
     --stone: 232, 226, 220;
     --pimk: 199, 0, 102;
-    --pale-pimk: 232, 156, 187;
     --bloo: 37, 131, 232;
 }
 
@@ -12,14 +11,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p, ul, ol {
-    margin-top: 0.2rem;
+    margin-top: 0.2em;
 }
 
 body {
     background-color: rgb(var(--stone));
     color: rgb(var(--pimk));
     font-family: 'Alegreya', serif;
-    font-size: 16pt;
+    font-size: 1.3em;
     margin: 88px 16px 32px 16px;
 }
 
@@ -39,17 +38,16 @@ a {
 
 hr {
     border: none;
-    border-top: 3px solid rgb(var(--pale-pimk));
-    margin: 16px 0;
+    border-top: 3px solid rgba(var(--pimk), 0.3);
+    margin: 0.9em 0;
 }
 
 footer, nav {
-    font-size: 12pt;
+    font-size: 0.85em;
 }
 
 .flag {
     image-rendering: pixelated;
-    vertical-align: -0.5rem;
     padding: 0px 4px;
 }
 
@@ -68,8 +66,14 @@ ul {
 
 @media print {
     body {
-        background-color: white;
+        background-color: none;
         color: black;
+        font-size: 1em;
+        margin: initial;
+    }
+
+    body > div {
+        max-width: none;
     }
 
     a {
