@@ -38,10 +38,10 @@ module.exports = function(eleventyConfig) {
         if (parts.length === 0) return `<a href="/" aria-current="page">home</a>`
 
         let here = `<a href="/">home</a>`
-        let path = ""
+        let path = "/"
         const last = parts[parts.length - 1]
         for (let part of parts) {
-            path += `/${part}`
+            path += `${part}/`
 
             let current = part === last ? `aria-current="page"` : ``
 
