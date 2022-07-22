@@ -1,10 +1,10 @@
 @import url('fonts/alegreya.css');
 
 :root {
-    --stone: rgb(232, 226, 220);
-    --pimk: rgb(199, 0, 102);
-    --pale-pimk: rgb(232, 156, 187);
-    --bloo: rgb(37, 131, 232);
+    --stone: 232, 226, 220;
+    --pimk: 199, 0, 102;
+    --pale-pimk: 232, 156, 187;
+    --bloo: 37, 131, 232;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -16,8 +16,8 @@ p, ul, ol {
 }
 
 body {
-    background-color: var(--stone);
-    color: var(--pimk);
+    background-color: rgb(var(--stone));
+    color: rgb(var(--pimk));
     font-family: 'Alegreya', serif;
     font-size: 16pt;
     margin: 88px 16px 32px 16px;
@@ -29,17 +29,17 @@ body > div {
 }
 
 a {
-    color: var(--pimk)
+    color: rgb(var(--pimk))
 }
 
 ::selection {
-    background-color: var(--pimk);
-    color: var(--stone);
+    background-color: rgb(var(--pimk));
+    color: rgb(var(--stone));
 }
 
 hr {
     border: none;
-    border-top: 3px solid var(--pale-pimk);
+    border-top: 3px solid rgb(var(--pale-pimk));
     margin: 16px 0;
 }
 
@@ -55,7 +55,7 @@ footer, nav {
 
 :focus-visible {
     outline-offset: 2px;
-    outline: 4px solid var(--bloo);
+    outline: 4px solid rgb(var(--bloo));
 }
 
 ul {
@@ -63,7 +63,7 @@ ul {
 }
 
 :target {
-    background-color: rgb(199, 0, 102, 0.1)
+    background-color: rgba(var(--pimk), 0.1)
 }
 
 @media print {
