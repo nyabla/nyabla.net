@@ -1,0 +1,16 @@
+---
+layout: base.njk
+---
+<h2>{{ title }}</h2>
+{% if description %}
+    <p class="postDesc"><i>{{ description }}</i></p>
+{% endif %}
+
+<div class="postInfo">
+    <span>status: {{ status }}</span>
+    <span>planted: {{ planted | isoDate }}</span>
+    <span>last tended: {{ page.date | isoDate }}</span>
+</div>
+<hr>
+
+{{ content | safe }}

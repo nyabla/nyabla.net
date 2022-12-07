@@ -5,6 +5,10 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/assets");
     eleventyConfig.addPassthroughCopy("src/favicon.ico");
 
+    eleventyConfig.addFilter("isoDate", date => {
+        return date.toISOString().substring(0, 10)
+    })
+
     // FOOTNOTES
 
     let footnotes = []
@@ -87,7 +91,7 @@ module.exports = function(eleventyConfig) {
 
                 item += `<a href="${page.url}">${page.data.title || page.name}</a>`
 
-                if (page.children.length > 0) {
+                if (page.children.length > 0 && page.data.excludeChildrenFromSitemap !== true) {
                     item += createList(page.children)
                 }
 

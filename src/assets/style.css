@@ -42,8 +42,20 @@ hr {
     margin: 0.9em 0;
 }
 
-footer, nav {
+footer, nav, .postInfo {
     font-size: 0.85em;
+}
+
+.postInfo {
+    color: rgba(var(--pimk), 0.6);
+}
+
+.postInfo span {
+    display: block;
+}
+
+.postDesc {
+    margin-bottom: 0;
 }
 
 .flag {
