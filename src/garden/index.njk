@@ -14,7 +14,7 @@ maybe slightly bigger ones in the medium of posts, please enjoy :)
 {% for plant in collections.plant | reverse %}
     <li>
         <b><a href="{{ plant.url }}">{{ plant.data.title }}</a></b> <br>
-        <i>last updated: {{ plant.date | isoDate }}</i>
+        <i>tended: {{ plant.date | isoDate }}</i>
     </li>
 {% endfor %}
 </ul>
