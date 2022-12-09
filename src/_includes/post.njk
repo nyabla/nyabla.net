@@ -8,8 +8,8 @@ layout: base.njk
 
 <div class="postInfo">
     <span>status: {{ status }}</span>
-    <span>planted: {{ planted | isoDate }}</span>
-    <span>last tended: {{ page.date | isoDate }}</span>
+    <span>planted: <time datetime="{{ planted | isoDate }}">{{ planted | isoDate }}</time></span>
+    <span>last tended: <time datetime="{{ page.date | isoDate }}">{{ page.date | isoDate }}</time></span>
 </div>
 <hr>
 
